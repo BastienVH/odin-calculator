@@ -1,14 +1,28 @@
+.container {
+
+}
+
 .btnContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 16px;
+  margin: 16px;
 }
 
-.clear {
-  grid-column: 1 / 4;
+.display {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  height: 48px;
+  background-color: #181f32;
+  border-radius: 4px;
+  text-align: right;
+  color: #f8f9ff;
+  font-size: 24px;
+  margin: 16px;
 }
 
-#btn0 {
+.clear, #btn0  {
   grid-column: 1 / 4;
 }
