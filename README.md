@@ -16,7 +16,7 @@ It supports all basic calc-functions (sum, substract, multiply, divide).
   - [ ] Your calculator should not evaluate more than a single pair of numbers at a time.
   - [ ] You should round answers with long decimals so that they don't overflow the screen.
   - [ ] Pressing = before entering all of the numbers or an operator could cause problems!
-  - [ ] Pressing “clear” should wipe out any existing data.. make sure the user is really starting fresh after pressing “clear”.
+  - [x] Pressing “clear” should wipe out any existing data.. make sure the user is really starting fresh after pressing “clear”.
   - [ ] Display a snarky error message if the user tries to divide by 0… don't let it crash your calculator!
 - [ ] EXTRA CREDIT GOALS:
   - [ ] Users can get floating point numbers if they do the math required to get one, but they can't type them in yet. Add a . button and let users input decimals! Make sure you don't let them type more than one though: 12.3.56.5. It is hard to do math on these numbers. (disable the decimal button if there's already one in the display)

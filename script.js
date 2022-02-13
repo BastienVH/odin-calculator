@@ -27,6 +27,17 @@ operatorBtns.forEach(btn => btn.addEventListener('click', (event) => {
   updateDisplay();
 }));
 
+// clear button
+const clearBtn = document.getElementById('clear');
+clearBtn.addEventListener('click', () => {
+    // clear operator, firstValue and secondValue
+    operator = "";
+    firstValue = 0;
+    secondValue = 0;
+    clearDisplay();
+});
+
+
 const calcBtn = document.getElementById('calculate');
 calcBtn.addEventListener('click', () => {
   //  - store displayValue as number in secondValue
