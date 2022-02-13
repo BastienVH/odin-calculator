@@ -70,6 +70,8 @@ function clearDisplay() {
 
 // calculate
 function calculate() {
+  // exit if not all values have been entered before pressing equals
+  if (!operator) return;
   //  - store displayValue as number in secondValue
   secondValue = parseFloat(displayValue);
   if (checkDivideByZero()) {
