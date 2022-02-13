@@ -41,6 +41,14 @@ clearBtn.addEventListener('click', () => {
 const calcBtn = document.getElementById('calculate');
 calcBtn.addEventListener('click', calculate);
 
+function checkDivideByZero() {
+  if (operator === "divide" && secondValue === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 // function to update display after clicking a button
 function updateDisplay () {
   display.textContent = displayValue;
@@ -61,12 +69,15 @@ function clearDisplay() {
 
 // calculate
 function calculate() {
-    //  - store displayValue as number in secondValue
-    secondValue = parseFloat(displayValue);
-    //  - call operate with operator firstValue and secondValue
+  //  - store displayValue as number in secondValue
+  secondValue = parseFloat(displayValue);
+  if (checkDivideByZero()) {
+    displayValue = "Can't divide by zero!";
+  } else {
     displayValue = operate(operator, firstValue, secondValue);
-    updateDisplay();
-    clearData();
+  }
+  updateDisplay();
+  clearData();
 }
 
 // general calculation function
