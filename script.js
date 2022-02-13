@@ -18,6 +18,10 @@ numberBtns.forEach(btn => btn.addEventListener('click', () => {
 //function that adds on clicked operatorButtons value to variable and stores operator
 const operatorBtns = document.querySelectorAll(".btnOperate");
 operatorBtns.forEach(btn => btn.addEventListener('click', (event) => {
+  // if firstValue has a value, we should first operate on that one to string operations
+  if (firstValue) {
+    operate(operator, firstValue, parseFloat(displayValue))
+  }
   //store entered value in variable
   firstValue = parseFloat(displayValue);
   //  - store which operator button was called
@@ -30,11 +34,8 @@ operatorBtns.forEach(btn => btn.addEventListener('click', (event) => {
 // clear button
 const clearBtn = document.getElementById('clear');
 clearBtn.addEventListener('click', () => {
-    // clear operator, firstValue and secondValue
-    operator = "";
-    firstValue = 0;
-    secondValue = 0;
-    clearDisplay();
+  clearData();
+  clearDisplay();
 });
 
 
@@ -45,11 +46,19 @@ calcBtn.addEventListener('click', () => {
   //  - call operate with operator firstValue and secondValue
   displayValue = operate(operator, firstValue, secondValue);
   updateDisplay();
+  // clearData(); TODO: Check if necessary
 });
 
 // function to update display after clicking a button
 function updateDisplay () {
   display.textContent = displayValue;
+}
+
+// function to clear all data
+function clearData() {
+    operator = "";
+    firstValue = 0;
+    secondValue = 0;
 }
 
 // function to clear the display
