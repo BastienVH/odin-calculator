@@ -20,7 +20,7 @@ const operatorBtns = document.querySelectorAll(".btnOperate");
 operatorBtns.forEach(btn => btn.addEventListener('click', (event) => {
   // if firstValue has a value, we should first operate on that one to string operations
   if (firstValue) {
-    operate(operator, firstValue, parseFloat(displayValue))
+    calculate();
   }
   //store entered value in variable
   firstValue = parseFloat(displayValue);
@@ -67,7 +67,6 @@ function calculate() {
     //  - call operate with operator firstValue and secondValue
     displayValue = operate(operator, firstValue, secondValue);
     updateDisplay();
-    // clearData(); TODO: Check if necessary
 }
 
 // general calculation function
