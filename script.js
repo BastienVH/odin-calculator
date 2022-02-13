@@ -2,7 +2,7 @@
 const display = document.querySelector('.display-text');
 
 // variable that stores display value
-let displayValue = "";
+let displayValue = "0";
 let firstValue;
 let secondValue;
 let operator;
@@ -10,6 +10,7 @@ let operator;
 //function that adds on clicked buttons value to back displayValue
 const numberBtns = document.querySelectorAll('.btnNum');
 numberBtns.forEach(btn => btn.addEventListener('click', () => {
+  if (displayValue === "0") {displayValue = ""};
   displayValue += btn.textContent;
   updateDisplay();
 }));
@@ -40,7 +41,11 @@ function updateDisplay () {
   display.textContent = displayValue;
 }
 
-
+// function to clear the display
+function clearDisplay() {
+  displayValue = "0";
+  updateDisplay();
+}
 // general calculation function
 function operate(operator, a, b) {
   if (operator == 'add') return add(a, b);
