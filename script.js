@@ -18,7 +18,7 @@ numberBtns.forEach(btn => btn.addEventListener('click', () => {
 //function that adds on clicked operatorButtons value to variable and stores operator
 const operatorBtns = document.querySelectorAll(".btnOperate");
 operatorBtns.forEach(btn => btn.addEventListener('click', (event) => {
-  // if firstValue has a value, we should first operate on that one to string operations
+  // if firstValue has a value, we should first operate on that one to string operations and show the result
   if (firstValue) {
     calculate();
   }
@@ -26,9 +26,8 @@ operatorBtns.forEach(btn => btn.addEventListener('click', (event) => {
   firstValue = parseFloat(displayValue);
   //  - store which operator button was called
   operator = event.target.id;
-  // empty out the display
+  // reset displayValue so new numbers don't get tacked onto what is already on screen
   displayValue = "";
-  updateDisplay();
 }));
 
 // clear button
