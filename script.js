@@ -67,6 +67,7 @@ function calculate() {
     //  - call operate with operator firstValue and secondValue
     displayValue = operate(operator, firstValue, secondValue);
     updateDisplay();
+    clearData();
 }
 
 // general calculation function
