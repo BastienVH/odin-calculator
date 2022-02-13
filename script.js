@@ -16,6 +16,18 @@ function updateDisplay () {
   display.textContent = displayValue;
 }
 
+/*
+Getting the calculator to work:
+- when an operator button is pressed:
+  - store displayValue as number in variable firstValue
+  - store which operator button was called
+  - reset display
+- when equals button is pressed:
+  - store displayValue as number in secondValue
+  - call operate with operator firstValue and secondValue
+  - set displayValue to return value of operate
+*/
+
 // general calculation function
 function operate(operator, a, b) {
   if (operator == 'add') return add(a, b);
