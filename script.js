@@ -3,6 +3,9 @@ const display = document.querySelector('.display-text');
 
 // variable that stores display value
 let displayValue = "";
+let firstValue;
+let secondValue;
+let operator;
 
 //function that adds on clicked buttons value to back displayValue
 const numberBtns = document.querySelectorAll('.btnNum');
@@ -11,22 +14,32 @@ numberBtns.forEach(btn => btn.addEventListener('click', () => {
   updateDisplay();
 }));
 
+//function that adds on clicked operatorButtons value to variable and stores operator
+const operatorBtns = document.querySelectorAll(".btnOperate");
+operatorBtns.forEach(btn => btn.addEventListener('click', (event) => {
+  //store entered value in variable
+  firstValue = parseFloat(displayValue);
+  //  - store which operator button was called
+  operator = event.target.id;
+  // empty out the display
+  displayValue = "";
+  updateDisplay();
+}));
+
+const calcBtn = document.getElementById('calculate');
+calcBtn.addEventListener('click', () => {
+  //  - store displayValue as number in secondValue
+  secondValue = parseFloat(displayValue);
+  //  - call operate with operator firstValue and secondValue
+  displayValue = operate(operator, firstValue, secondValue);
+  updateDisplay();
+});
+
 // function to update display after clicking a button
 function updateDisplay () {
   display.textContent = displayValue;
 }
 
-/*
-Getting the calculator to work:
-- when an operator button is pressed:
-  - store displayValue as number in variable firstValue
-  - store which operator button was called
-  - reset display
-- when equals button is pressed:
-  - store displayValue as number in secondValue
-  - call operate with operator firstValue and secondValue
-  - set displayValue to return value of operate
-*/
 
 // general calculation function
 function operate(operator, a, b) {
