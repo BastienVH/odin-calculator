@@ -40,14 +40,7 @@ clearBtn.addEventListener('click', () => {
 
 
 const calcBtn = document.getElementById('calculate');
-calcBtn.addEventListener('click', () => {
-  //  - store displayValue as number in secondValue
-  secondValue = parseFloat(displayValue);
-  //  - call operate with operator firstValue and secondValue
-  displayValue = operate(operator, firstValue, secondValue);
-  updateDisplay();
-  // clearData(); TODO: Check if necessary
-});
+calcBtn.addEventListener('click', calculate);
 
 // function to update display after clicking a button
 function updateDisplay () {
@@ -66,6 +59,17 @@ function clearDisplay() {
   displayValue = "0";
   updateDisplay();
 }
+
+// calculate
+function calculate() {
+    //  - store displayValue as number in secondValue
+    secondValue = parseFloat(displayValue);
+    //  - call operate with operator firstValue and secondValue
+    displayValue = operate(operator, firstValue, secondValue);
+    updateDisplay();
+    // clearData(); TODO: Check if necessary
+}
+
 // general calculation function
 function operate(operator, a, b) {
   if (operator == 'add') return add(a, b);
