@@ -56,7 +56,6 @@ function updateDisplay () {
 
 // function to clear all data
 function clearData() {
-  displayValue = "";
   operator = "";
   firstValue = 0;
   secondValue = 0;
