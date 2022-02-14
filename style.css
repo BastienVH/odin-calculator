@@ -1,5 +1,8 @@
+html {
+  background-color: #3b4664;
+}
 .container {
-
+  width: 300px;
 }
 
 .btnContainer {
@@ -23,6 +26,24 @@
   margin: 16px;
 }
 
+.btnNum {
+  background-color: #eae3db;
+}
+
+.btnCalc {
+  background-color: #D13F30;
+  color: #f8f9ff;
+}
+
+.btnOperate {
+  background-color: #647299;
+  color: #f8f9ff;
+}
+
 .clear, #btn0  {
   grid-column: 1 / 4;
+}
+
+.clear {
+  background-color: #95aae5;
 }
