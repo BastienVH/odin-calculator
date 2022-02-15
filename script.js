@@ -51,8 +51,17 @@ function checkDivideByZero() {
   }
 }
 
+// function to limit amount of decimals in display
+function removeDecimals() {
+  // check if displayValue has a decimal point and is longer than 16 digits
+  if (displayValue.toString().length > 16 && displayValue.toString().includes('.')) {
+    displayValue = parseFloat(displayValue.toString().substring(0,16));
+  }
+}
+
 // function to update display after clicking a button
 function updateDisplay () {
+  removeDecimals();
   display.textContent = displayValue;
 }
 
