@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Digital7';
+  src: url('Digital7-font.ttf');
+}
+
 body {
   background-color: #3b4664;
   display: flex;
@@ -21,6 +26,7 @@ body {
 }
 
 .display {
+  font-family: "Digital7";
   display: flex;
   flex-direction: column;
   justify-content:center;
@@ -36,6 +42,7 @@ body {
 
 .btnNum {
   background-color: #eae3db;
+  font-family: "Digital7";
 }
 
 .btnCalc {

@@ -1,6 +1,7 @@
 # odin-calculator
 This repo houses a calculator for The Odin Project.
 It supports all basic calc-functions (sum, substract, multiply, divide).
+Display-font used: [Digital-7 by Style 7](https://www.fontspace.com/digital-7-font-f7087).
 
 # TODO
 - [x] Create a new function operate that takes an operator and 2 numbers and then calls one of the above functions on the numbers.
