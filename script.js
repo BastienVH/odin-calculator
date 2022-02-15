@@ -11,7 +11,9 @@ let operator;
 const numberBtns = document.querySelectorAll('.btnNum');
 numberBtns.forEach(btn => btn.addEventListener('click', () => {
   if (displayValue === "0") {displayValue = ""};
-  displayValue += btn.textContent;
+  if (displayValue.length < 16) {
+    displayValue += btn.textContent;
+  }
   updateDisplay();
 }));
 
