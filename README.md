@@ -13,7 +13,7 @@ Display-font used: [Digital-7 by Style 7](https://www.fontspace.com/digital-7-fo
   - [x] You should already have the code that can populate the display, so once operate() has been called, update the display with the "solution" to the operation.
   - [x] This is the hardest part of the project. You need to figure out how to store all the values and call the operate function with them. Don't feel bad if it takes you a while to figure out the logic.
 - [x] Users should be able to string together several operations and get the right answer, with each pair of numbers being evaluated at a time. For example, 12 + 7 - 5 * 3 = should yield 42.
-- [ ] Check these possible issues:
+- [x] Check these possible issues:
   - [x] Your calculator should not evaluate more than a single pair of numbers at a time.
   - [x] You should round answers with long decimals so that they don't overflow the screen.
   - [x] Pressing = before entering all of the numbers or an operator could cause problems!
