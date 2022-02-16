@@ -15,7 +15,7 @@ Display-font used: [Digital-7 by Style 7](https://www.fontspace.com/digital-7-fo
 - [x] Users should be able to string together several operations and get the right answer, with each pair of numbers being evaluated at a time. For example, 12 + 7 - 5 * 3 = should yield 42.
 - [ ] Check these possible issues:
   - [x] Your calculator should not evaluate more than a single pair of numbers at a time.
-  - [ ] You should round answers with long decimals so that they don't overflow the screen.
+  - [x] You should round answers with long decimals so that they don't overflow the screen.
   - [x] Pressing = before entering all of the numbers or an operator could cause problems!
   - [x] Pressing “clear” should wipe out any existing data.. make sure the user is really starting fresh after pressing “clear”.
   - [x] Display a snarky error message if the user tries to divide by 0… don't let it crash your calculator!
